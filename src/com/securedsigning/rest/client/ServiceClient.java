@@ -7,11 +7,8 @@ import org.apache.commons.io.IOUtils;
 import java.io.*;
 import java.lang.reflect.Type;
 import java.net.*;
-import java.nio.file.Files;
 import java.text.*;
 import java.util.*;
-
-
 /**
  * RestClient which uses Service Stack Client to communicate with REST API.
  */
@@ -81,7 +78,7 @@ public class ServiceClient{
                     "Content-Type: "
                             + URLConnection.guessContentTypeFromName(fileName)+
                             NEWLINE).getBytes());
-            //writer.append("Content-Transfer-Encoding: binary").append(NEWLINE);
+
             stream.write(NEWLINE.getBytes());
             stream.flush();
 
@@ -89,11 +86,6 @@ public class ServiceClient{
             FileInputStream inputStream = new FileInputStream(uploadFile);
             byte[] fileBytes = IOUtils.toByteArray(inputStream);
             inputStream.close();
-            //byte[] buffer = new byte[1024];
-            //int bytesRead = -1;
-            //while ((bytesRead = inputStream.read(buffer)) != -1) {
-            //    stream.write(buffer, 0, bytesRead);
-            //}
             stream.write(fileBytes);
             stream.flush();
 

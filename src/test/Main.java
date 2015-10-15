@@ -1,8 +1,6 @@
 package test;
 
 import com.securedsigning.rest.client.*;
-
-import java.io.File;
 import java.util.*;
 
 public class Main {

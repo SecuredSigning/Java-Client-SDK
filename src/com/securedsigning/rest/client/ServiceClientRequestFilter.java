@@ -76,8 +76,6 @@ class ServiceClientRequestFilter implements ConnectionFilter {
 
     public void exec(java.net.HttpURLConnection httpURLConnection){
 
-        //httpURLConnection.setRequestProperty("Accept", "application/json");
-        //httpURLConnection.setRequestProperty("Content-Type", "application/json");
         httpURLConnection.setRequestProperty("Referer", accessUrl);
 
         //create a random string to be part of the signature
