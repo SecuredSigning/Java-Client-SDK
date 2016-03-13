@@ -1,5 +1,5 @@
 # Secured Signing Java Client SDK
-.NET Client SDK for Secured Signing
+Java Client SDK for Secured Signing
 
 ## About Secured Signing
 
